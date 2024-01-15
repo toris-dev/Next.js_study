@@ -4,4 +4,4 @@
 **Client-Component vs Server-Component**
 
 ### [PagesRouter](markdown-app/)
-**SSR vs CSR || SSG ISR **
+**SSR vs CSR || SSG ISR**
