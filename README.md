@@ -1,9 +1,7 @@
 # fastcampus_nextjs_study
 
-### AppRouter
+### [AppRouter](approuter_next/)
+Client-Component vs Server-Component
 
-![AppRouter](approuter_next/)
-
-### PagesRouter
-
-![PagesRouter](markdown-app/)
+### [PagesRouter](markdown-app/)
+SSR vs CSR || SSG ISR 
