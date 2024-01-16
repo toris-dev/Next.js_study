@@ -1,0 +1,28 @@
+{
+  "todos": [
+    {
+      "id": "6d3b",
+      "userId": 1,
+      "title": "운동하기",
+      "completed": true
+    },
+    {
+      "id": "d58a",
+      "userId": 1,
+      "title": "밥먹기",
+      "completed": true
+    },
+    {
+      "id": "e105",
+      "userId": 1,
+      "title": "사과하기",
+      "completed": true
+    },
+    {
+      "id": "44b6",
+      "userId": 1,
+      "title": "술먹기",
+      "completed": true
+    }
+  ]
+}
