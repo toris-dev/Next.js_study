@@ -6,7 +6,7 @@ export interface AppButtonProps {
   colorScheme: string;
   variant: string;
   className?: string;
-  disabled: boolean;
+  disabled?: boolean;
   width?: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   onClick: (e?: any) => void;
