@@ -1,30 +1,24 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### services
 
-Currently, two official plugins are available:
+- 데이터 패칭을 위해 services/fetchQuestions.tsx 에서 함수 정의
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### components
 
-## Expanding the ESLint configuration
+- AppButton, QuestionCard, Spinner 컴포넌트를 이용하여 props를 주면 컴포넌트단에서 스타일링, 데이터를 보여준다.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### constans
 
-- Configure the top-level `parserOptions` property like this:
+- 상수들의 집합이라고 보면 되는데 enum으로 상수 집합 정의. 총 퀴즈개수, 퀴즈난이도를 정의하였다.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+### App.tsx
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- 모든 상태관리를 App.tsx 에서 하기로 정의하였다. 원래는 컴포넌트 상태관리 또한 분할해야 한다.
+- next.js 와 react 의 비교를 위하여 진행하는 것이므로 한곳에 때려박았다.
+
+### 응답속도
+
+- 로드하는데 149ms,
+- DOMContentLoad 130ms
+- resource 2.6MB
