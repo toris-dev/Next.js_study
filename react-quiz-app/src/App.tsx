@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./App";
 import { IQuestion, IUserAnswer } from "./types";
 import { getQuestionList } from "./services/fetchQuestions";
 import { Difficutlty, totalQuestions } from "./constans";
@@ -27,7 +28,6 @@ function App() {
       setLoading(false);
     };
     fetchQuestions();
-    console.log(questions, loading);
   }, []);
 
   const startQuizGame = (): void => {
@@ -83,7 +83,7 @@ function App() {
       !gameOver &&
       !loading &&
       !startQuiz ? (
-        <div>
+        <div className="greeting-box">
           <Box boxShadow="base" p="6" rounded="md" bg="white" maxW="560px">
             <Heading as="h2" size="lg" mb={2}>
               퀴즈 앱
