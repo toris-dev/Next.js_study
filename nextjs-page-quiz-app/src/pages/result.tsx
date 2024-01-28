@@ -1,6 +1,5 @@
 import { TQuiz, TSavedAnswer } from "@/types/quiz";
 import Link from "next/link";
-import React from "react";
 import useSWR from "swr";
 
 const Result = () => {
