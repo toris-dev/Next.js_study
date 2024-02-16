@@ -21,6 +21,7 @@ const QuizForm = () => {
   };
 
   const quizEnd = () => {
+    setAnswers([...answers, currentAnswer]);
     setQuizEnded(true);
   };
   const nextQuestion = () => {
