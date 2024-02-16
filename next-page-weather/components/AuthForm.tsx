@@ -1,6 +1,7 @@
 import { User } from "@/models/customTypes";
 import emailIcon from "@/public/email_envelope_mail_send_icon.svg";
 import lockIcon from "@/public/lock_locker_icon.svg";
+import { signIn } from "next-auth/react";
 import { useRouter } from "next/router";
 import { FormEvent, useState } from "react";
 import InputContainer from "./InputContainer";
@@ -57,6 +58,18 @@ const AuthForm = () => {
         console.error(error);
       }
     } else {
+      const result = await signIn("credentials", {
+        redirect: false,
+        enteredEmail,
+        enteredPassword,
+      });
+
+      if (!result?.error) {
+        router.replace("/weather");
+      }
+      if (result?.error) {
+        console.error(result?.error);
+      }
     }
   };
   return (
