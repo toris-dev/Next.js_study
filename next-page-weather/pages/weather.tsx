@@ -45,7 +45,7 @@ const Weather = () => {
       }
     };
     getWeatherData();
-  }, []);
+  }, [city]);
 
   const logoutHandler = () => {
     const data = signOut({ redirect: false, callbackUrl: "/" });
@@ -68,7 +68,7 @@ const Weather = () => {
       className={`w-3/4 ${cardBg} bg-cover bg-card bg-blend-overlay lg:w-1/4`}
     >
       <div className="weather">
-        <SeacrhBar />
+        <SeacrhBar onCityChange={setCity} />
         {weatherResultContent}
         <button
           className="btn btn__secondary"

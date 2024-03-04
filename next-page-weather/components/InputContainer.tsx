@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 type Props = {
-  type: "email" | "password";
+  type: "email" | "password" | "text";
   value?: string;
   placeholder?: string;
   iconAlt: string;
