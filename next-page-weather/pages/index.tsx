@@ -21,7 +21,7 @@ export default function Home() {
   }, [router]);
   return (
     <>
-      <Layout>
+      <Layout className="w-3/4 lg:w-1/2">
         <WelcomeContent />
         <AuthForm />
       </Layout>
